@@ -8,7 +8,13 @@ function sortear() {
     if (de >= ate) {
         alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
         return;
-      }
+    }
+
+    //Validação do intervalo a ser sorteado com a quantidade de números
+    if (quantidade > (ate - de + 1)) {
+    alert('Campo "Quantidade" deve ser menor ou igual ao intervalo informado no campo "Do número" até o campo "Até o número". Verifique!');
+    return;
+    }
     
     let numerosSorteados = []; //array para armazenar os números sorteados
     let numeroSorteado; //variável para armazenar o número sorteado
