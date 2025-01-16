@@ -3,6 +3,13 @@ function sortear() {
     let quantidadeDeNumeros = parseInt(document.getElementById('quantidade').value);
     let numeroInicial = parseInt(document.getElementById('de').value);
     let numeroFinal = parseInt(document.getElementById('ate').value);
+
+    //Validação dos campos
+    if (de >= ate) {
+        alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
+        return;
+      }
+    
     let numerosSorteados = []; //array para armazenar os números sorteados
     let numeroSorteado; //variável para armazenar o número sorteado
 
